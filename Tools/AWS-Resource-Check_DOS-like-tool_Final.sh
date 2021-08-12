@@ -82,7 +82,7 @@ case $CHOICE in
            echo "The services with tag `service` are:"/n && aws ec2 describe-tags --filters "Name=tag:service,Values=*" --output text | awk '{print $5}' | sort | uniq #1>$PWD/TNT_service
             ;;
         2)
-           echo "The services with tag `Service` are:"/n && aws ec2 describe-tags --filters "Name=tag:Service,Values=*" --output text | awk '{print $5}' | sort | uniq 
+           echo "The services with tag 'Service' are:" && aws ec2 describe-tags --filters "Name=tag:Service,Values=*" --output text | awk '{print $5}' | sort | uniq 
             ;;
         3)
             echo "The services with tag `Type` are:"/n && aws ec2 describe-tags --filters "Name=tag:Type,Values=*" --output text | awk '{print $5}' | sort | uniq 
@@ -100,7 +100,7 @@ case $CHOICE2 in
            echo "The services with tag `Service` are:"/n && aws ec2 describe-tags --filters "Name=tag:Service,Values=*" --output text | awk '{print $5}' | sort | uniq 
             ;;
         3)
-            echo "The services with tag `Type` are:"/n && aws ec2 describe-tags --filters "Name=tag:Type,Values=*" --output text | awk '{print $5}' | sort | uniq  
+            echo "The services with tag 'Type' are:" && aws ec2 describe-tags --filters "Name=tag:Type,Values=*" --output text | awk '{print $5}' | sort | uniq  
             ;;
         4)  
             echo "The services with tag `type` are:"/n && aws ec2 describe-tags --filters "Name=tag:type,Values=*" --output text | awk '{print $5}' | sort | uniq  
@@ -109,15 +109,15 @@ esac
 
 case $CHOICE3 in
         1)
-           echo "The services with tag `service` are:"/n && aws ec2 describe-tags --filters "Name=tag:service,Values=*" --output text | awk '{print $5}' | sort | uniq  
+           echo "The services with tag `service` are:" && aws ec2 describe-tags --filters "Name=tag:service,Values=*" --output text | awk '{print $5}' | sort | uniq  
             ;;
         2)
-           echo "The services with tag `Service` are:"/n && aws ec2 describe-tags --filters "Name=tag:Service,Values=*" --output text | awk '{print $5}' | sort | uniq  
+           echo "The services with tag `Service` are:" && aws ec2 describe-tags --filters "Name=tag:Service,Values=*" --output text | awk '{print $5}' | sort | uniq  
             ;;
         3)
-            echo "The services with tag `Type` are:"/n && aws ec2 describe-tags --filters "Name=tag:Type,Values=*" --output text | awk '{print $5}' | sort | uniq  
+            echo "The services with tag `Type` are:" && aws ec2 describe-tags --filters "Name=tag:Type,Values=*" --output text | awk '{print $5}' | sort | uniq  
             ;;
         4)  
-            echo "The services with tag `type` are:"/n && aws ec2 describe-tags --filters "Name=tag:type,Values=*" --output text | awk '{print $5}' | sort | uniq 
+            echo "The services with tag 'type' are:" && aws ec2 describe-tags --filters "Name=tag:type,Values=*" --output text | awk '{print $5}' | sort | uniq 
             ;;
 esac
